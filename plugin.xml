@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="net.impactotecnologico.kioskmode" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Plugin para modo kiosko - Solo Android</name>
+    <js-module name="KPlugin" src="www/KPlugin.js">
+        <clobbers target="KPlugin" />
+    </js-module>
+
+    <platform name="android">
+    
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="KPlugin">
+                <param name="android-package" value="net.impactotecnologico.kioskmode" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+
+            <!-- activity to use as launcher - because Cordova app is failing if started while boot -->
+            <activity android:label="@string/activity_name" 
+            android:launchMode="singleTask" 
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+            android:keepScreenOn="true" 
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|uiMode" 
+            android:windowSoftInputMode="adjustResize" 
+            android:name="net.impactotecnologico.kioskmode.KPlugin">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.DEFAULT" /><!-- Handler of app icon (required to be launcher) -->
+                    <category android:name="android.intent.category.HOME" /><!-- Handler of Home button -->
+                </intent-filter>
+            </activity>
+            
+            <receiver android:name="net.impactotecnologico.kioskmode.BootReceiver">
+                <intent-filter >
+                    <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                </intent-filter>
+            </receiver>
+
+
+        </config-file>
+
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.WAKE_LOCK" /> 
+            <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+            <uses-permission-sdk-23 android:name="android.permission.WAKE_LOCK" />
+            <uses-permission-sdk-23 android:name="android.permission.DISABLE_KEYGUARD" />
+
+            <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+            <uses-permission-sdk-23 android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+            <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+            <uses-permission-sdk-23 android:name="android.permission.REORDER_TASKS"/>
+
+            <uses-permission android:name="android.permission.GET_TASKS" />
+
+            <uses-permission-sdk-23 android:name="android.permission.GET_TASKS"/>
+
+            <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW"/>
+            <uses-permission-sdk-23 android:name="android.permission.INTERNAL_SYSTEM_WINDOW"/>
+        </config-file>
+
+        <source-file src="src/android/java/net/impactotecnologico/KPlugin.java" target-dir="src/net/impactotecnologico" />
+        <source-file src="src/android/java/net/impactotecnologico/AppContext.java" target-dir="src/net/impactotecnologico" />
+        <source-file src="src/android/java/net/impactotecnologico/BootReceiver.java" target-dir="src/net/impactotecnologico" />
+        <source-file src="src/android/java/net/impactotecnologico/KioskService.java" target-dir="src/net/impactotecnologico" />
+        <source-file src="src/android/java/net/impactotecnologico/OnScreenOffReceiver.java" target-dir="src/net/impactotecnologico" />
+        <source-file src="src/android/java/net/impactotecnologico/PrefUtils.java" target-dir="src/net/impactotecnologico" />
+        
+        
+
+    </platform>
+
+</plugin>

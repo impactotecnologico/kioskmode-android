@@ -1,0 +1,19 @@
+{
+    "name": "kioskmode-android",
+    "version": "1.0.0",
+    "description": "Plugin para modo kiosko en Android",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/impactotecnologico/kioskmode-android"
+    },
+    "keywords": [],
+    "author": "Impacto Tecnologico",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/impactotecnologico/kioskmode-android/issues"
+    },
+    "homepage": "hhttps://github.com/impactotecnologico/kioskmode-android#readme"
+}
