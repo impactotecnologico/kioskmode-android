@@ -22,12 +22,14 @@
             android:keepScreenOn="true" 
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|uiMode" 
             android:windowSoftInputMode="adjustResize" 
-            android:name="net.impactotecnologico.kioskmode.KPlugin">
+            android:name="net.impactotecnologico.kioskmode.KioskActivity">
+            <!--
                 <intent-filter>
                     <action android:name="android.intent.action.MAIN" />
-                    <category android:name="android.intent.category.DEFAULT" /><!-- Handler of app icon (required to be launcher) -->
-                    <category android:name="android.intent.category.HOME" /><!-- Handler of Home button -->
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.HOME" />
                 </intent-filter>
+            -->
             </activity>
             
             <receiver android:name="net.impactotecnologico.kioskmode.BootReceiver">
