@@ -37,5 +37,5 @@ var KPlugin = {
     
 }
 
-module.exports = KioskPlugin;
+module.exports = KPlugin;
 
