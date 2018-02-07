@@ -23,13 +23,13 @@
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|uiMode" 
             android:windowSoftInputMode="adjustResize" 
             android:name="net.impactotecnologico.kioskmode.KioskActivity">
-            <!--
+            
                 <intent-filter>
                     <action android:name="android.intent.action.MAIN" />
                     <category android:name="android.intent.category.DEFAULT" />
                     <category android:name="android.intent.category.HOME" />
                 </intent-filter>
-            -->
+            
             </activity>
             
             <receiver android:name="net.impactotecnologico.kioskmode.BootReceiver">
