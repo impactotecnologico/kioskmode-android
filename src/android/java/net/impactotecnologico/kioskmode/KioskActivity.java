@@ -3,7 +3,6 @@ package net.impactotecnologico.kioskmode;
 import android.content.Intent;
 import android.os.Build;
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -21,7 +20,7 @@ public class KioskActivity extends Activity {
     private final List blockedKeys = new ArrayList(Arrays.asList(KeyEvent.KEYCODE_VOLUME_DOWN, KeyEvent.KEYCODE_VOLUME_UP));
     private Button hiddenExitButton;
     private int currentApiVersion;
-    public static String CLASS_TAG=KPlugin.class.getSimpleName();
+    public static String CLASS_TAG=KioskActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
