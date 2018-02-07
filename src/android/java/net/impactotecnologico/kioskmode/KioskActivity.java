@@ -33,8 +33,8 @@ public class KioskActivity extends Activity {
 
         // every time someone enters the kiosk mode, set the flag true
         PrefUtils.setKioskModeActive(true, getApplicationContext());
-
-        hiddenExitButton = (Button) findViewById(R.id.hiddenExitButton);
+        
+        hiddenExitButton = (Button) findViewById((getResources().getIdentifier("hiddenExitButton","id",getPackageName())));
         hiddenExitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
