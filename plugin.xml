@@ -63,12 +63,12 @@
             <uses-permission-sdk-23 android:name="android.permission.INTERNAL_SYSTEM_WINDOW"/>
         </config-file>
 
-        <source-file src="src/android/java/net/impactotecnologico/KPlugin.java" target-dir="src/net/impactotecnologico" />
-        <source-file src="src/android/java/net/impactotecnologico/AppContext.java" target-dir="src/net/impactotecnologico" />
-        <source-file src="src/android/java/net/impactotecnologico/BootReceiver.java" target-dir="src/net/impactotecnologico" />
-        <source-file src="src/android/java/net/impactotecnologico/KioskService.java" target-dir="src/net/impactotecnologico" />
-        <source-file src="src/android/java/net/impactotecnologico/OnScreenOffReceiver.java" target-dir="src/net/impactotecnologico" />
-        <source-file src="src/android/java/net/impactotecnologico/PrefUtils.java" target-dir="src/net/impactotecnologico" />
+        <source-file src="src/android/java/net/impactotecnologico/kioskmode/KPlugin.java" target-dir="src/net/impactotecnologico" />
+        <source-file src="src/android/java/net/impactotecnologico/kioskmode/AppContext.java" target-dir="src/net/impactotecnologico" />
+        <source-file src="src/android/java/net/impactotecnologico/kioskmode/BootReceiver.java" target-dir="src/net/impactotecnologico" />
+        <source-file src="src/android/java/net/impactotecnologico/kioskmode/KioskService.java" target-dir="src/net/impactotecnologico" />
+        <source-file src="src/android/java/net/impactotecnologico/kioskmode/OnScreenOffReceiver.java" target-dir="src/net/impactotecnologico" />
+        <source-file src="src/android/java/net/impactotecnologico/kioskmode/PrefUtils.java" target-dir="src/net/impactotecnologico" />
         
         
 
