@@ -28,7 +28,6 @@ public class KPlugin extends CordovaPlugin {
   public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
     this.context = cordova.getActivity().getApplicationContext();
     this.activity = cordova.getActivity();
-    this.action = action;
     try {
       Intent intent = new Intent(context, KioskActivity.class);
       System.out.println("Entra en vista");

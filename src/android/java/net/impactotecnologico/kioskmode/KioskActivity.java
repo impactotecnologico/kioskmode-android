@@ -26,7 +26,10 @@ public class KioskActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
-        setContentView(R.layout.activity_main);
+        
+        
+        
+        setContentView(getResources().getIdentifier("activity_main", "layout", getPackageName()));
 
         // every time someone enters the kiosk mode, set the flag true
         PrefUtils.setKioskModeActive(true, getApplicationContext());
