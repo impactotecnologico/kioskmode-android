@@ -1,7 +1,7 @@
-
+cordova.define("net.impactotecnologico.kioskmode.KPlugin", function(require, exports, module) {
 var exec = require('cordova/exec');
 
-var KPlugin = {
+var KActivity = {
     
     exitKiosk: function () {
         exec(null, null, "KPlugin", "exitKiosk", []);
@@ -37,5 +37,5 @@ var KPlugin = {
     
 }
 
-module.exports = KPlugin;
+module.exports = KActivity;
 
