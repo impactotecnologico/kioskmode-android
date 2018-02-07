@@ -26,7 +26,7 @@ public class KPlugin extends CordovaPlugin {
     this.context = cordova.getActivity().getApplicationContext();
     this.activity = cordova.getActivity();
     try {
-      Intent intent = new Intent(context, KioskActivity.class);
+      Intent intent = new Intent(context, MainActivity.class);
       System.out.println("Entra en vista");
       this.cordova.getActivity().startActivity(intent);
     } catch (Exception e) {
