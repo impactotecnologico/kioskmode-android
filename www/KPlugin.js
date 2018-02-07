@@ -39,4 +39,4 @@ cordova.define("net.impactotecnologico.kioskmode.KPlugin", function(require, exp
 
   module.exports = KActivity;
 
-}
+)}
