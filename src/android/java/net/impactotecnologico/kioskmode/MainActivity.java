@@ -15,12 +15,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends ActionBarActivity {
+public class KPlugin extends ActionBarActivity {
 
     private final List blockedKeys = new ArrayList(Arrays.asList(KeyEvent.KEYCODE_VOLUME_DOWN, KeyEvent.KEYCODE_VOLUME_UP));
     private Button hiddenExitButton;
     private int currentApiVersion;
-    public static String CLASS_TAG=MainActivity.class.getSimpleName();
+    public static String CLASS_TAG=KPlugin.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

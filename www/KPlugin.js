@@ -1,10 +1,10 @@
 
 var exec = require('cordova/exec');
 
-var KioskPlugin = {
+var KPlugin = {
     
     exitKiosk: function () {
-        exec(null, null, "KioskPlugin", "exitKiosk", []);
+        exec(null, null, "KPlugin", "exitKiosk", []);
     },
     
     isInKiosk: function (callback) {
@@ -15,8 +15,8 @@ var KioskPlugin = {
         exec(function(out){
             callback(out == "true");
         }, function(error){
-            alert("KioskPlugin.isInKiosk failed: " + error);
-        }, "KioskPlugin", "isInKiosk", []);
+            alert("KPlugin.isInKiosk failed: " + error);
+        }, "KPlugin", "isInKiosk", []);
     },
     
     isSetAsLauncher: function (callback) {
@@ -27,12 +27,12 @@ var KioskPlugin = {
         exec(function(out){
             callback(out == "true");
         }, function(error){
-            alert("KioskPlugin.isSetAsLauncher failed: " + error);
-        }, "KioskPlugin", "isSetAsLauncher", []);
+            alert("KPlugin.isSetAsLauncher failed: " + error);
+        }, "KPlugin", "isSetAsLauncher", []);
     },
     
     setAllowedKeys: function (keyCodes) {
-        exec(null, null, "KioskPlugin", "setAllowedKeys", keyCodes);
+        exec(null, null, "KPlugin", "setAllowedKeys", keyCodes);
     }
     
 }
