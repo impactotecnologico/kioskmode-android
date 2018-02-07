@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
