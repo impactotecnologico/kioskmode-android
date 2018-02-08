@@ -18,9 +18,7 @@ import java.util.List;
 public class MainActivity extends Activity {
 
     private final List blockedKeys = new ArrayList(Arrays.asList(KeyEvent.KEYCODE_VOLUME_DOWN, KeyEvent.KEYCODE_VOLUME_UP));
-    private Button hiddenExitButton;
     private int currentApiVersion;
-    public static String CLASS_TAG=MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +26,10 @@ public class MainActivity extends Activity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
         
         
-        
+        /*
+        * Solo para pruebas en local
+        Button hiddenExitButton;
         setContentView(getResources().getIdentifier("activity_main", "layout", getPackageName()));
-
-        // every time someone enters the kiosk mode, set the flag true
-        PrefUtils.setKioskModeActive(true, getApplicationContext());
-        
         hiddenExitButton = (Button) findViewById((getResources().getIdentifier("hiddenExitButton","id",getPackageName())));
         hiddenExitButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,13 +39,18 @@ public class MainActivity extends Activity {
                 Toast.makeText(getApplicationContext(),"Ahora si puedes salir de la app!", Toast.LENGTH_SHORT).show();
             }
         });
+        */
+
+        // every time someone enters the kiosk mode, set the flag true
+        PrefUtils.setKioskModeActive(true, getApplicationContext());
+        
+        
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         hideNavigationBar1();
-        Log.d(CLASS_TAG,"Resume");
     }
 
     private void hideNavigationBar1() {
@@ -84,10 +85,6 @@ public class MainActivity extends Activity {
                         }
                     });
         }
-
-
-
-
     }
 
     @Override
